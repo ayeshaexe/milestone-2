@@ -42,6 +42,7 @@ input {
     border-radius: 10px;
     padding-left: 10px;
     margin: 10px 0px 10px 0px;
+    background-color: rgb(250, 246, 227);
 }
 .inside {
     height: 350px;
@@ -67,6 +68,7 @@ textarea {
     color: rgb(42, 54, 99);
     padding: 10px 0 0 10px;
     border: none;
+    background-color: rgb(250, 246, 227);
 }
 /* button */
 .button {
@@ -102,6 +104,7 @@ button {
 @media only screen and (max-width: 768px){
     .sec-1 {
         margin: 30px 100px 30px 100px;
+        height: 400px;
     }
     .sec-2 {
         margin: 30px 100px 30px 100px;
@@ -144,6 +147,14 @@ button {
     }
     #resumeOutput {
         margin: 30px 20px 30px 20px;
+    }
+}
+@media only screen and (max-width: 307px){
+    .heading {
+        font-size: 15px;
+    }
+    .button {
+        gap: 10px;
     }
 }
 @media only screen and (max-width: 320px){
