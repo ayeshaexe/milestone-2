@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic Resume</title>
+</head>
+<body>
+    <div>
+        <form id="resume">
+            <div class="heading"><h1>Dynamic Resume</h1></div>
+            <div class="sec-1">
+                <fieldset class="fieldset-1">
+                    <legend>Personal information</legend>
+                    <div class="inside">
+                        <!-- Personal information -->
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" placeholder="Enter your name" required><br>
+
+                    <!-- Phone number -->
+                    <label for="number">Phone(Num):</label><br>
+                    <input type="tel" id="number" placeholder="Enter your Phone number" required><br>
+
+                    <!-- Email -->
+                    <label for="Email">E-mail:</label><br>
+                    <input type="email" id="Email" placeholder="Enter your E-mail" required><br>
+
+                    <!-- Github -->
+                    <label for="Github">Github:</label><br>
+                    <input type="github" id="Github" placeholder="Enter your Github" required><br>
+                    </div> 
+                </fieldset>   
+            </div>
+
+            <div class="sec-2">
+                <fieldset class="fieldset-2">
+                <legend>Education</legend> 
+                <!-- education -->
+                <div class="inside-1">
+                    <label for="education">Education:</label><br>
+                    <textarea id="education" placeholder="Enter your Education" rows="4" required></textarea>
+                </div>
+                </fieldset>
+            
+                 <!-- Skills -->
+                <fieldset class="fieldset-2">
+                <legend>Skills</legend>
+                <div class="inside-1">
+                    <label for="skills">Skills:</label><br>
+                    <textarea id="skills" placeholder="Enter your Skills" rows="4" required></textarea>
+                </div>
+                </fieldset>
+            
+                <!-- Experience -->
+                <fieldset class="fieldset-2">
+                <legend>Experience</legend>
+                <div class="inside-1">
+                    <label for="experience">Experience:</label><br>
+                    <textarea id="experience" placeholder="Enter your Experience" rows="4" required></textarea>
+                </div>
+                </fieldset>
+            </div>
+
+            <!-- Button -->
+            <div class="button"> 
+            <button type="submit">Generate Resume</button>
+            <button>Edit Resume</button>
+            <button>Share Resume</button>
+            </div>   
+            <!-- Dynamic resume -->
+            <div id="resumeOutput">
+            <!-- Resume will be generated below-->
+            </div>
+
+            <script src="/app.js"></script>
+        </form>
+    </div>
+</body>
+</html>
