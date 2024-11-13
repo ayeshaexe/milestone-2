@@ -23,19 +23,19 @@ document.getElementById("resume")?.addEventListener("submit", function(event){
     const resumeOutput =
     `
     <h2><b>Resume</b><h2>
-    <h3>Personal Information</h3>
+    <h3>Personal Information:</h3>
     <p><b>Name:</b> ${name1}</p> 
     <p><b>Phone-Number:</b> ${Pnumber}</p>
     <p><b>E-mail:</b> ${e_mail}</p>
     <p><b>Github:</b> ${Github}</p>
 
-    <h3>Education</h3>
+    <h3>Education:</h3>
     <p>${Education}</p>
 
-    <h3>skills</h3>
+    <h3>skills:</h3>
     <p>${skills1}</p>
 
-    <h3>Experience</h3>
+    <h3>Experience:</h3>
     <p>${Experience}</p>
     `;
     const display_resume = document.getElementById("resumeOutput");
@@ -43,4 +43,25 @@ document.getElementById("resume")?.addEventListener("submit", function(event){
         display_resume.innerHTML = resumeOutput;
     }
 }
+});
+document.getElementById("editResumeButton")?.addEventListener("click", function() {
+    const form = document.getElementById("resume");
+    const displayResume = document.getElementById("resumeOutput");
+
+    // Show the form and clear the displayed resume
+    if (form && displayResume) {
+        form.style.display = "block";
+        displayResume.innerHTML = "";
+        console.log("Editing mode activated.");
+    }
+});
+// Share resume (copy resume content to clipboard)
+document.getElementById("shareResumeButton")?.addEventListener("click", function () {
+    const resumeText = document.getElementById("resumeOutput")?.innerText;
+    if (resumeText) {
+        navigator.clipboard.writeText(resumeText)
+            .then(() => alert('Resume text copied to clipboard for sharing!'))
+            // .catch(err => alert('Failed to copy: '));
+            .catch(err => alert('Failed to copy: ' + err));
+    }
 });
